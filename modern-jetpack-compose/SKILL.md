@@ -7,6 +7,7 @@ description: >
   Use when reading, writing, or reviewing any Jetpack Compose project.
 license: MIT
 metadata:
+  author: Anh Vu <anhvt52@gmail.com>
   version: "1.0"
 ---
 
