@@ -4,6 +4,25 @@ An agent skill for writing, reviewing, and reasoning about modern Android UI cod
 using Jetpack Compose. Compatible with Claude Code, Cursor, Codex, and any platform
 that supports the Agent Skills format.
 
+![Claude Code](https://img.shields.io/badge/Claude_Code-supported-blueviolet?logo=anthropic)
+![Cursor](https://img.shields.io/badge/Cursor-supported-blue?logo=cursor)
+![Codex](https://img.shields.io/badge/Codex-supported-green?logo=openai)
+![Gemini](https://img.shields.io/badge/Gemini-supported-orange?logo=google)
+
+---
+
+## Why This Skill?
+
+LLMs frequently generate outdated or incorrect Jetpack Compose code. Common problems:
+
+- **Wrong state collection** — using `collectAsState()` instead of `collectAsStateWithLifecycle()`
+- **Unstable recomposition** — passing unstable lambdas or undecorated data classes that cause unnecessary redraws
+- **Ignored Scaffold padding** — forgetting to apply `paddingValues` from `Scaffold`'s content lambda, causing content to render under system bars
+- **Stale APIs** — referencing accompanist libraries that have since been upstreamed into Compose, or Material 2 APIs that have Material 3 equivalents
+- **Architecture drift** — mixing state hoisting patterns or bypassing the UDF model
+
+This skill gives your AI agent a curated, up-to-date reference for all of these areas so it generates correct, idiomatic Compose code from the start.
+
 ---
 
 ## What It Does
